@@ -12,16 +12,15 @@ public class Selectable : MonoBehaviour
 
     }
 
-    public void Attach(Transform othertransform)
+    public void MoveSelected(Vector3 position)
     {
-        transform.SetParent(othertransform);
+        transform.position = position;
         spriteRenderer.sortingLayerName = "Selected";
     }
 
 
     public void Release()
     {
-        transform.parent = null;
         spriteRenderer.sortingLayerName = "Unselected";
     }
 
