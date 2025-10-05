@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d35fd706c03b7cf449110e98d3441326
+guid: 072c3bb5eceb89a45a62b3a79f035ece
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6190527953165155527
-    second: Emerald_WTDG_0
+      213: -9124721285837815638
+    second: Sapphire_WTDG 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Emerald_WTDG_0
+      name: Sapphire_WTDG 1_0
       rect:
         serializedVersion: 2
-        x: 597
-        y: 1284
-        width: 483
-        height: 765
+        x: 1529
+        y: 340
+        width: 562
+        height: 831
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 933077b10a3d61aa0800000000000000
-      internalID: -6190527953165155527
+      spriteID: aa0013bd55a7e5180800000000000000
+      internalID: -9124721285837815638
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Emerald_WTDG_0: -6190527953165155527
+      Sapphire_WTDG 1_0: -9124721285837815638
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

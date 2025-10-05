@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7c280132b479da74ab42e20cbf54c2d7
+guid: e6918ca45701d5f4f98afa0f15e83943
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8052539892854091619
-    second: BloodVial_WTDG_0
+      213: -4898780218098776206
+    second: Emerald_WTDG 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BloodVial_WTDG_0
+      name: Emerald_WTDG 1_0
       rect:
         serializedVersion: 2
-        x: 1707
-        y: 365
-        width: 167
-        height: 727
+        x: 1553
+        y: 336
+        width: 483
+        height: 765
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d9015c2b1a1af3090800000000000000
-      internalID: -8052539892854091619
+      spriteID: 2770383b859040cb0800000000000000
+      internalID: -4898780218098776206
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BloodVial_WTDG_0: -8052539892854091619
+      Emerald_WTDG 1_0: -4898780218098776206
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

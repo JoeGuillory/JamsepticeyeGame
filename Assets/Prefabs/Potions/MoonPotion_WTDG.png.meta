@@ -8,9 +8,6 @@ TextureImporter:
   - first:
       213: -8157618583002844637
     second: MoonPotion_WTDG_1
-  - first:
-      213: 6992961405012381002
-    second: MoonPotion_WTDG_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,10 +119,10 @@ TextureImporter:
       name: MoonPotion_WTDG_0
       rect:
         serializedVersion: 2
-        x: 838
-        y: 160
+        x: 1450
+        y: 309
         width: 676
-        height: 1158
+        height: 1172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,30 +141,8 @@ TextureImporter:
       name: MoonPotion_WTDG_1
       rect:
         serializedVersion: 2
-        x: 1312
-        y: 155
-        width: 37
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3227df2ae115ace80800000000000000
-      internalID: -8157618583002844637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MoonPotion_WTDG_2
-      rect:
-        serializedVersion: 2
-        x: 1374
-        y: 164
+        x: 1986
+        y: 328
         width: 19
         height: 7
       alignment: 0
@@ -178,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4d87c9f85dfb0160800000000000000
-      internalID: 6992961405012381002
+      spriteID: 3227df2ae115ace80800000000000000
+      internalID: -8157618583002844637
       vertices: []
       indices: 
       edges: []
@@ -200,7 +175,6 @@ TextureImporter:
     nameFileIdTable:
       MoonPotion_WTDG_0: -8460472454280667302
       MoonPotion_WTDG_1: -8157618583002844637
-      MoonPotion_WTDG_2: 6992961405012381002
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

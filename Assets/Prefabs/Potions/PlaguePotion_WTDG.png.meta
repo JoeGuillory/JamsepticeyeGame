@@ -119,10 +119,10 @@ TextureImporter:
       name: PlaguePotion_WTDG_0
       rect:
         serializedVersion: 2
-        x: 2850
-        y: 1639
-        width: 14
-        height: 35
+        x: 1427
+        y: 361
+        width: 721
+        height: 1108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: PlaguePotion_WTDG_1
       rect:
         serializedVersion: 2
-        x: 1872
-        y: 37
-        width: 720
-        height: 1108
+        x: 1795
+        y: 231
+        width: 53
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
