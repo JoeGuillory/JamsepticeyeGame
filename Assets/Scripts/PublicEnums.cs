@@ -3,21 +3,23 @@ using UnityEngine;
 public enum PotionType
 {
     Empty = 0,
-    Sapphire,
     Ruby,
     Emerald,
+    Sapphire,
+    Celestial,
+    Sun,
+    Moon,
+    Blood,
     Nectar,
     Ichor,
     Blessing,
-    HolyIchor,
-    Life,
-    Sun,
-    Celestial,
-    Moon,
-    Blood,
     Plague,
+    HolyIchor,
+    DarkIchor,
+    Life,
     Death,
-    Soul
+    Soul,
+    Mortality
 }
 
 public enum ItemType
