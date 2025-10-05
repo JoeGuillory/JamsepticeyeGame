@@ -1,3 +1,3 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/BackGround/WriteThatDownGame_Background.png?fileID=21300000&amp;guid=0c6298b2d09cb9143bb3130eaefc1889&amp;type=3#WriteThatDownGame_Background&quot;);" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: none;" />
 </ui:UXML>
