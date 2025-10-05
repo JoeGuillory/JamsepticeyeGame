@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: 41601be94ad82b34a8dd716b0c3dda71
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -507980454178233665
+    second: WriteThatDown_TitleLogo_0
+  - first:
+      213: 5860957568055459779
+    second: WriteThatDown_TitleLogo_1
+  - first:
+      213: -4704651996256795681
+    second: WriteThatDown_TitleLogo_2
+  - first:
+      213: -3620681859529921771
+    second: WriteThatDown_TitleLogo_3
+  - first:
+      213: 8980256297019301114
+    second: WriteThatDown_TitleLogo_4
+  - first:
+      213: -8022110214510276817
+    second: WriteThatDown_TitleLogo_5
+  - first:
+      213: -8624253028686576845
+    second: WriteThatDown_TitleLogo_6
+  - first:
+      213: -8060894736813110490
+    second: WriteThatDown_TitleLogo_7
+  - first:
+      213: -4211972873693812018
+    second: WriteThatDown_TitleLogo_8
+  - first:
+      213: -5484966579265662895
+    second: WriteThatDown_TitleLogo_9
+  - first:
+      213: -6585276421325824742
+    second: WriteThatDown_TitleLogo_10
+  - first:
+      213: -4496162548090948325
+    second: WriteThatDown_TitleLogo_11
+  - first:
+      213: -8821511702618804542
+    second: WriteThatDown_TitleLogo_12
+  - first:
+      213: 4226950476350844079
+    second: WriteThatDown_TitleLogo_13
+  - first:
+      213: -5921505239121507463
+    second: WriteThatDown_TitleLogo_14
+  - first:
+      213: -7609695489912590901
+    second: WriteThatDown_TitleLogo_15
+  - first:
+      213: 1863415944612402711
+    second: WriteThatDown_TitleLogo_16
+  - first:
+      213: -8600009991363210773
+    second: WriteThatDown_TitleLogo_17
+  - first:
+      213: 5890034831039175042
+    second: WriteThatDown_TitleLogo_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_0
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 831
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb26dd3e77a43f8f0800000000000000
+      internalID: -507980454178233665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_1
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 679
+        width: 92
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cf359ffadd465150800000000000000
+      internalID: 5860957568055459779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_2
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 682
+        width: 114
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3084b8fe7b5beb0800000000000000
+      internalID: -4704651996256795681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_3
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 653
+        width: 169
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ba40e2801c0cdc0800000000000000
+      internalID: -3620681859529921771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 630
+        width: 366
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afcdccfc58740ac70800000000000000
+      internalID: 8980256297019301114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_5
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 645
+        width: 86
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f051b434dbba090800000000000000
+      internalID: -8022110214510276817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_6
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 660
+        width: 59
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333cc0c409f705880800000000000000
+      internalID: -8624253028686576845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_7
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 654
+        width: 126
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b407002f2f12090800000000000000
+      internalID: -8060894736813110490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_8
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 622
+        width: 135
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eca26e3ccf01c85c0800000000000000
+      internalID: -4211972873693812018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_9
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 598
+        width: 117
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1501bfde4fb71e3b0800000000000000
+      internalID: -5484966579265662895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 479
+        width: 83
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d5e1f2cf56c94a0800000000000000
+      internalID: -6585276421325824742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_11
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 463
+        width: 913
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15bf94fbfb6a91c0800000000000000
+      internalID: -4496162548090948325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_12
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 254
+        width: 141
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce647748d1b39580800000000000000
+      internalID: -8821511702618804542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_13
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 304
+        width: 189
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac6f0a101529aa30800000000000000
+      internalID: 4226950476350844079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_14
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 392
+        width: 77
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b4c86cb5692dda0800000000000000
+      internalID: -5921505239121507463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_15
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 461
+        width: 83
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcd2ed2154ee46690800000000000000
+      internalID: -7609695489912590901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_16
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 327
+        width: 212
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716db67cdee2cd910800000000000000
+      internalID: 1863415944612402711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_17
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 307
+        width: 186
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be15cf74a70a6a880800000000000000
+      internalID: -8600009991363210773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WriteThatDown_TitleLogo_18
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 291
+        width: 67
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28994cad87b9db150800000000000000
+      internalID: 5890034831039175042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WriteThatDown_TitleLogo_0: -507980454178233665
+      WriteThatDown_TitleLogo_1: 5860957568055459779
+      WriteThatDown_TitleLogo_10: -6585276421325824742
+      WriteThatDown_TitleLogo_11: -4496162548090948325
+      WriteThatDown_TitleLogo_12: -8821511702618804542
+      WriteThatDown_TitleLogo_13: 4226950476350844079
+      WriteThatDown_TitleLogo_14: -5921505239121507463
+      WriteThatDown_TitleLogo_15: -7609695489912590901
+      WriteThatDown_TitleLogo_16: 1863415944612402711
+      WriteThatDown_TitleLogo_17: -8600009991363210773
+      WriteThatDown_TitleLogo_18: 5890034831039175042
+      WriteThatDown_TitleLogo_2: -4704651996256795681
+      WriteThatDown_TitleLogo_3: -3620681859529921771
+      WriteThatDown_TitleLogo_4: 8980256297019301114
+      WriteThatDown_TitleLogo_5: -8022110214510276817
+      WriteThatDown_TitleLogo_6: -8624253028686576845
+      WriteThatDown_TitleLogo_7: -8060894736813110490
+      WriteThatDown_TitleLogo_8: -4211972873693812018
+      WriteThatDown_TitleLogo_9: -5484966579265662895
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
