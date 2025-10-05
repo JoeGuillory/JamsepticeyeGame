@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3985a2ed93877a44bfd11c93fc68494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Selectable
+  moveable: 1
 --- !u!114 &3878032167281206273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13221cd51731144aaf5d4a0f2a4d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Potion
-  PotionStatus: 11
+  PotionStatus: 6
   SpriteTransform: {fileID: 1245140116676888993}
   DropletOffset: {fileID: 2913037417250924097}
   DropletPrefab: {fileID: 6714818476932672809, guid: a2625a06314154e4cb88feeddbd512ac, type: 3}

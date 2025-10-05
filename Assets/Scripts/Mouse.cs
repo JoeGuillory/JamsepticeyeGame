@@ -36,15 +36,22 @@ public class Mouse : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
        if(SelectableObject.GameObject() == collision.gameObject)
-        {
+       {
             SelectableObject = null;
-        }
+       }
     }
-
 
     // Update is called once per frame
     void Update()
     {
+        if(SelectAction.triggered)
+        {
+            if (!SelectableObject)
+                return;
+            SelectableObject.GrabItem(transform.position);
+            SelectableObject.MakeAPotion();
+        }
+
         if(SelectAction.inProgress)
         {
             if (!SelectableObject)
