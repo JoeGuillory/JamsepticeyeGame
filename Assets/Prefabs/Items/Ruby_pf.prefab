@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3985a2ed93877a44bfd11c93fc68494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Selectable
+  moveable: 1
 --- !u!114 &8345603718546995167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,4 +214,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be20bbe76c2aa244e9508f45dd031bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  CurrentItemType: 2
+  CurrentItemType: 1

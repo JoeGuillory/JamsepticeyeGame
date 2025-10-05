@@ -49,6 +49,7 @@ public class Mouse : MonoBehaviour
             if (!SelectableObject)
                 return;
             SelectableObject.GrabItem(transform.position);
+            SelectableObject.MakeAPotion();
         }
 
         if(SelectAction.inProgress)

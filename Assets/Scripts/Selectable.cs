@@ -8,11 +8,19 @@ public class Selectable : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
     BaseItemGivers ItemGiver;
+    Cauldron TheCauldron;
 
     private void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         ItemGiver = GetComponentInChildren<BaseItemGivers>();
+        TheCauldron = GetComponentInChildren<Cauldron>();
+    }
+
+    public void MakeAPotion()
+    {
+        if (TheCauldron != null)
+            TheCauldron.MakePotion();
     }
 
     public void GrabItem(Vector3 position)

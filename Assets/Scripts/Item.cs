@@ -11,9 +11,9 @@ public class Item : MonoBehaviour
 
     private void Start()
     {
-        GameObject mouse = GameObject.Find("Mouse");
-        transform.position = mouse.transform.position;
-        isSelectable = GetComponentInChildren<Selectable>();
+        //GameObject mouse = GameObject.Find("Mouse");
+        //transform.position = mouse.transform.position;
+        //isSelectable = GetComponentInChildren<Selectable>();
         //isSelectable.MoveSelected(mouse.transform.position);
     }
 
