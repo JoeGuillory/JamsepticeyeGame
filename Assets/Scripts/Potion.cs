@@ -8,6 +8,7 @@ public class Potion : MonoBehaviour
     [SerializeField] Transform SpriteTransform;
     [SerializeField] Transform DropletOffset;
     [SerializeField] Droplet DropletPrefab;
+    [SerializeField] int MaxUses = 3;
     bool ResetRotationInvoked = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -16,12 +17,19 @@ public class Potion : MonoBehaviour
         return DropletOffset.position;
     }
 
+    private void Update()
+    {
+        if(MaxUses == 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
     bool IsRotated()
     {
         if (SpriteTransform.rotation == Quaternion.Euler(0, 0, 90))
             return true;
         else
-            return false;
+            return false; 
     }
 
     void ResetSpriteRotation()
@@ -32,6 +40,7 @@ public class Potion : MonoBehaviour
 
     public void PourPotion()
     {
+        MaxUses--;
         if (!IsRotated())
             SpriteTransform.rotation = Quaternion.Euler(0, 0, 90);
 
