@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2968170cf2da323408e41e700bd25e81
+guid: 08598242e6a8f484a83a42a68ca4524d
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -116,10 +116,10 @@ TextureImporter:
       name: ExitButton_WTDG_0
       rect:
         serializedVersion: 2
-        x: 6168
-        y: 625
-        width: 10189
-        height: 2751
+        x: 262
+        y: 305
+        width: 1431
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
