@@ -35,6 +35,7 @@ public class Cauldron : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Check to see if the colliding object is a droplet or an item
         if (!(collision.GetComponent("Droplet") || collision.GetComponent("Item")))
             return;
 
