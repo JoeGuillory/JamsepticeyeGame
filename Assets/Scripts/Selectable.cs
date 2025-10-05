@@ -9,7 +9,6 @@ public class Selectable : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-
     }
 
     public void MoveSelected(Vector3 position)
