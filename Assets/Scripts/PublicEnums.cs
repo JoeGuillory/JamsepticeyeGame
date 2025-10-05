@@ -3,6 +3,9 @@ using UnityEngine;
 public enum PotionType
 {
     Empty = 0,
+    Sapphire,
+    Ruby,
+    Emerald,
     Nectar,
     Ichor,
     Blessing,
@@ -20,7 +23,4 @@ public enum PotionType
 public enum ItemType
 {
     Empty = 0,
-    Sapphire,
-    Ruby,
-    Emerald
 }
