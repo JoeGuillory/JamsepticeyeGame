@@ -17,7 +17,8 @@ public enum PotionType
     Blood,
     Plague,
     Death,
-    Soul
+    Soul,
+    Mortality
 }
 
 public enum ItemType
