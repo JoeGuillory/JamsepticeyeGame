@@ -44,9 +44,21 @@ public class Potion : MonoBehaviour
         }
         
     }
+
     void SpawnDroplet()
     {
         Droplet drop = Instantiate(DropletPrefab,GetDropletOffset(),Quaternion.identity);
         drop.DripType = PotionStatus;
+    }
+
+    public void ChangePotionType(PotionType newPotionStatus)
+    {
+        PotionStatus = newPotionStatus;
+        return;
+    }
+    public void ChangePotionType(int newPotionStatus)
+    {
+        PotionStatus = (PotionType)(newPotionStatus);
+        return;
     }
 }
