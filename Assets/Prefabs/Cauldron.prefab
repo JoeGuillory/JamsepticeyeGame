@@ -250,5 +250,5 @@ MonoBehaviour:
   - {fileID: 5103529565062728884, guid: 982f843eb44439449b8713db87eedc4b, type: 3}
   - {fileID: 5103529565062728884, guid: 9ea92f00d4c07e8478a2f128685c037e, type: 3}
   - {fileID: 7376572278772165071, guid: e9e275e086e8b1b43ad9ec92b41ff3d7, type: 3}
-  - {fileID: 7376572278772165071, guid: e9e275e086e8b1b43ad9ec92b41ff3d7, type: 3}
+  - {fileID: 5103529565062728884, guid: 0a77cb5b9f0728642af63bfb536e38ee, type: 3}
   PotionSpawnPoint: {fileID: 295556754718150127}
