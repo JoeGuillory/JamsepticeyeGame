@@ -964,7 +964,7 @@ GameObject:
   - component: {fileID: 1645168558}
   - component: {fileID: 1645168557}
   m_Layer: 0
-  m_Name: MainMenu
+  m_Name: MainMenuAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
