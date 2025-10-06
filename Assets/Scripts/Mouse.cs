@@ -60,7 +60,7 @@ public class Mouse : MonoBehaviour
             return;
         collision.gameObject.TryGetComponent<Selectable>(out SelectableObject);
 
-        if(SelectableObject.TryGetComponent<Potion>(out Potion item))
+        if(SelectableObject.gameObject.TryGetComponent<Potion>(out Potion item))
         {
             if (item.Potionstatus == PotionType.Death || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Plague || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Mortality || item.Potionstatus == PotionType.Empty)
             {
@@ -72,7 +72,7 @@ public class Mouse : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         
-        if (SelectableObject.TryGetComponent<Potion>(out Potion item))
+        if (SelectableObject.gameObject.TryGetComponent<Potion>(out Potion item))
         {
             if (item.Potionstatus == PotionType.Death || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Plague || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Mortality || item.Potionstatus == PotionType.Empty)
             {
