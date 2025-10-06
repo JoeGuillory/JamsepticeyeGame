@@ -11,6 +11,9 @@ public class Cauldron : MonoBehaviour
     [SerializeField] Transform Slot1Position;
     [SerializeField] Transform Slot2Position;
     [SerializeField] Transform Slot3Position;
+    [SerializeField] GameObject IdleAnim;
+    [SerializeField] GameObject PourAnim;
+    [SerializeField] GameObject StirAnim;
     PotionType Slot1 = 0;
     GameObject Slot1ObjectTracker;
     PotionType Slot2 = 0;
@@ -100,9 +103,21 @@ public class Cauldron : MonoBehaviour
 
     public void MakePotion()
     {
+        IdleAnim.SetActive(false);
+        PourAnim.SetActive(false);
+        StirAnim.SetActive(true);
+
+        Invoke("CreatePotion", 2.0f);
+    }
+
+    public void CreatePotion()
+    {
         PotionType potion = GetRecipe(Slot1, Slot2, Slot3);
         if (potion != PotionType.Empty)
             Instantiate(PotionPrefabs[(int)potion], PotionSpawnPoint.position, Quaternion.identity);
+
+        StirAnim.SetActive(false);
+        IdleAnim.SetActive(true);
 
         ResetSlots();
     }

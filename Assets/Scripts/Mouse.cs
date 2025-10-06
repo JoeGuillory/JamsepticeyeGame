@@ -19,6 +19,14 @@ public class Mouse : MonoBehaviour
     int Health = 5;
 
     [SerializeField] UnityEvent Win;
+
+    [SerializeField] GameObject IdleAnim;
+    [SerializeField] GameObject HappyAnim;
+    [SerializeField] GameObject ScaredAnim;
+    [SerializeField] GameObject SkeletonAnim;
+    [SerializeField] GameObject PourAnim;
+    [SerializeField] GameObject StirAnim;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -96,6 +104,8 @@ public class Mouse : MonoBehaviour
         if (Health <= 0)
         {
             DrinkDeathPotion.Invoke();
+            IdleAnim.SetActive(false);
+            SkeletonAnim.SetActive(true);
         }
     }
     void SelectObject(InputAction.CallbackContext context)
@@ -125,11 +135,28 @@ public class Mouse : MonoBehaviour
         if(SelectableObject.TryGetComponent<Potion>(out Potion potion))
         {
             potion.PourPotion();
+            IdleAnim.SetActive(false);
+            PourAnim.SetActive(true);
+            Invoke("BackToIdle", 1.0f);
         }
         else if(SelectableObject.TryGetComponent<Item>(out Item item))
         {
 
         }
+    }
+
+    void BackToIdle()
+    {
+        if (PourAnim.activeInHierarchy)
+        {
+            IdleAnim.SetActive(true);
+            PourAnim.SetActive(false);
+        }
+
+        //HappyAnim.SetActive(false);
+        //SkeletonAnim.SetActive(false);
+        //ScaredAnim.SetActive(false);
+        //StirAnim.SetActive(false);
     }
 
     void DrinkItem(InputAction.CallbackContext context)
@@ -143,6 +170,8 @@ public class Mouse : MonoBehaviour
             {
                 Destroy(item.gameObject);
                 DrinkDeathPotion.Invoke();
+                IdleAnim.SetActive(false);
+                SkeletonAnim.SetActive(true);
             }
             if(item.Potionstatus == PotionType.Empty)
             {
