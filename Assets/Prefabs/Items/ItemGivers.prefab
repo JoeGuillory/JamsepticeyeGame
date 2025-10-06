@@ -76,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -1292336329
-  m_SortingLayer: 2
+  m_SortingLayerID: -1252234809
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.670365, g: 0.6981132, b: 0.32600567, a: 1}
@@ -160,7 +160,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7376572278772165071}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3985a2ed93877a44bfd11c93fc68494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Selectable
-  moveable: 1
+  moveable: 0
 --- !u!114 &-6523445376698875450
 MonoBehaviour:
   m_ObjectHideFlags: 0
