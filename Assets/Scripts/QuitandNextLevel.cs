@@ -14,5 +14,11 @@ public class QuitandNextLevel : MonoBehaviour
     {
         SceneManager.LoadScene("MainLevel");
     }
+
+    public void LoadLevelWithSoul()
+    {
+
+        SceneManager.LoadScene("MainLevelWithSoul");
+    }
     
 }

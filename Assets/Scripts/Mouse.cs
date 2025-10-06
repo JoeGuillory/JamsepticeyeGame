@@ -29,7 +29,8 @@ public class Mouse : MonoBehaviour
             MouseAction.performed += MoveMouse;
             UseAction.started += UseItem;
 
-            SelectAction.canceled += ReleaseObject;         
+            SelectAction.canceled += ReleaseObject;
+            DrinkAction.started += DrinkItem;
         }
     }
 
@@ -129,6 +130,7 @@ public class Mouse : MonoBehaviour
         {
             if(item.Potionstatus == PotionType.Death)
             {
+                Destroy(item.gameObject);
                 DrinkDeathPotion.Invoke();
             }
 
