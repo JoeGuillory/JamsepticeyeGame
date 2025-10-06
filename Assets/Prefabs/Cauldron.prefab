@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cauldron
   PotionPrefabs:
-  - {fileID: 0}
+  - {fileID: 5103529565062728884, guid: 4931d2fc53b2ed74a8801b94bdcaf7ba, type: 3}
   - {fileID: 7376572278772165071, guid: 508b2fea919189449aa8fac1741eb3c9, type: 3}
   - {fileID: 7376572278772165071, guid: b5423a3d25d59a84893758f3d7917ce8, type: 3}
   - {fileID: 7376572278772165071, guid: 592b89cf7f4722d4193d31c9309b2225, type: 3}
@@ -434,7 +434,7 @@ MonoBehaviour:
   - {fileID: 5103529565062728884, guid: 5745066ed4f37224389c39475b5ad793, type: 3}
   - {fileID: 5103529565062728884, guid: a743f3fa8103ae7458ee8b597d377c38, type: 3}
   - {fileID: 5103529565062728884, guid: c37950f4654f4ac49b8b2e8e8e7ad3bd, type: 3}
-  - {fileID: 7376572278772165071, guid: e9e275e086e8b1b43ad9ec92b41ff3d7, type: 3}
+  - {fileID: 5103529565062728884, guid: 1664be9e098dca94492ef3c31386260d, type: 3}
   - {fileID: 5103529565062728884, guid: 982f843eb44439449b8713db87eedc4b, type: 3}
   - {fileID: 5103529565062728884, guid: 9ea92f00d4c07e8478a2f128685c037e, type: 3}
   - {fileID: 7376572278772165071, guid: e9e275e086e8b1b43ad9ec92b41ff3d7, type: 3}
