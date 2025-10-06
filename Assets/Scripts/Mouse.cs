@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Mouse : MonoBehaviour
@@ -8,8 +9,11 @@ public class Mouse : MonoBehaviour
     InputAction MouseAction;
     InputAction UseAction;
     InputAction SelectAction;
+    InputAction DrinkAction;
     Selectable SelectableObject;
-
+    [SerializeField] UnityEvent SelectedDeathPotion;
+    [SerializeField] UnityEvent UnselectedDeathPotion;
+    [SerializeField] UnityEvent DrinkDeathPotion;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,26 +23,49 @@ public class Mouse : MonoBehaviour
             MouseAction = Controls.FindAction("MousePosition");
             UseAction = Controls.FindAction("Use");
             SelectAction = Controls.FindAction("Select");
+            DrinkAction = Controls.FindAction("Interact");
+
 
             MouseAction.performed += MoveMouse;
             UseAction.started += UseItem;
+
             SelectAction.canceled += ReleaseObject;         
         }
     }
+
+
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (SelectableObject != null)
             return;
         collision.gameObject.TryGetComponent<Selectable>(out SelectableObject);
+
+        if(SelectableObject.TryGetComponent<Potion>(out Potion potion))
+        {
+            if (potion.Potionstatus == PotionType.Death)
+            {
+                SelectedDeathPotion.Invoke();
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (SelectableObject.TryGetComponent<Potion>(out Potion potion))
+        {
+            if (potion.Potionstatus == PotionType.Death)
+            {
+                UnselectedDeathPotion.Invoke();
+            }
+        }
+
        if(SelectableObject.GameObject() == collision.gameObject)
        {
             SelectableObject = null;
        }
+
     }
 
     // Update is called once per frame
@@ -59,7 +86,12 @@ public class Mouse : MonoBehaviour
             SelectableObject.MoveSelected(transform.position);
         }
     }
-
+    void SelectObject(InputAction.CallbackContext context)
+    {
+        if (!SelectableObject)
+            return;
+      
+    }
     void ReleaseObject(InputAction.CallbackContext context)
     {
         if (!SelectableObject)
@@ -86,5 +118,21 @@ public class Mouse : MonoBehaviour
         {
 
         }
+    }
+
+    void DrinkItem(InputAction.CallbackContext context)
+    {
+        if (!SelectableObject)
+            return;
+
+        if(SelectableObject.TryGetComponent<Potion>(out Potion item))
+        {
+            if(item.Potionstatus == PotionType.Death)
+            {
+                DrinkDeathPotion.Invoke();
+            }
+
+        }
+
     }
 }

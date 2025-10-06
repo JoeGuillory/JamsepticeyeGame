@@ -201,6 +201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e442d2fa0dd80c54cae0488f944b4549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mouse
+  deathpotion:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1433191140130285168
 MonoBehaviour:
   m_ObjectHideFlags: 0
