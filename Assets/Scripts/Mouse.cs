@@ -15,6 +15,9 @@ public class Mouse : MonoBehaviour
     [SerializeField] UnityEvent SelectedDeathPotion;
     [SerializeField] UnityEvent UnselectedDeathPotion;
     [SerializeField] UnityEvent DrinkDeathPotion;
+    [SerializeField] GameObject BloodPotion;
+    //[SerializeField] Transform BloodSpawn;
+    int Health = 5;
 
     [SerializeField] UnityEvent Win;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -48,7 +51,7 @@ public class Mouse : MonoBehaviour
 
         if(SelectableObject.TryGetComponent<Potion>(out Potion item))
         {
-            if (item.Potionstatus == PotionType.Death || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Plague || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Mortality)
+            if (item.Potionstatus == PotionType.Death || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Plague || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Mortality || item.Potionstatus == PotionType.Empty)
             {
                 SelectedDeathPotion.Invoke();
             }
@@ -60,7 +63,7 @@ public class Mouse : MonoBehaviour
         
         if (SelectableObject.TryGetComponent<Potion>(out Potion item))
         {
-            if (item.Potionstatus == PotionType.Death || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Plague || item.Potionstatus == PotionType.Sapphire || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Mortality)
+            if (item.Potionstatus == PotionType.Death || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Plague || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Mortality || item.Potionstatus == PotionType.Empty)
             {
                 UnselectedDeathPotion.Invoke();
             }
@@ -89,6 +92,11 @@ public class Mouse : MonoBehaviour
             if (!SelectableObject)
                 return;
             SelectableObject.MoveSelected(transform.position);
+        }
+
+        if (Health <= 0)
+        {
+            DrinkDeathPotion.Invoke();
         }
     }
     void SelectObject(InputAction.CallbackContext context)
@@ -136,6 +144,12 @@ public class Mouse : MonoBehaviour
             {
                 Destroy(item.gameObject);
                 DrinkDeathPotion.Invoke();
+            }
+            if(item.Potionstatus == PotionType.Empty)
+            {
+                //BloodSpawn.position = new Vector3(0, 0, 0);
+                Instantiate(BloodPotion, new Vector3(0,0,0), Quaternion.identity);
+                Health--;
             }
             else if(item.Potionstatus == PotionType.Mortality)
             {
