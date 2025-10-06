@@ -1,101 +1,117 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Cauldron : MonoBehaviour
 {
-    [SerializeField] Potion PotionPrefab;
-
+    [SerializeField] GameObject[] PotionPrefabs;
+    [SerializeField] Transform PotionSpawnPoint;
     PotionType Slot1 = 0;
     PotionType Slot2 = 0;
     PotionType Slot3 = 0;
-
-    private void FixedUpdate()
-    {
-        //Check if all slots are filled
-        if (Slot3 == 0)
-            return;
-
-        //Add slots together
-        int s1 = (int)Slot1;
-        int s2 = (int)Slot2;
-        int s3 = (int)Slot3;
-        int potionResult = s1 + s2 + s3;
-
-        //Make a potion based of the added amount
-        Potion newPotion = Instantiate(PotionPrefab, transform.position, Quaternion.identity);
-        newPotion.ChangePotionType(potionResult);
-
-        //Reset Slots
-        Slot1 = PotionType.Empty;
-        Slot2 = PotionType.Empty;
-        Slot3 = PotionType.Empty;
-    }
+    int currentslot = 1;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!(collision.GetComponent("Droplet") || collision.GetComponent("Item")))
-            return;
-
-        int typeOfItem = 0;
-
-        if (collision.gameObject.TryGetComponent(out Droplet isDroplet))
+        if(collision.TryGetComponent<Droplet>(out Droplet droplet))
         {
-            typeOfItem = 1; //Droplet
+            AddDrip(droplet.DripType);
+            Destroy(droplet.gameObject);
         }
-        if (collision.gameObject.TryGetComponent(out Item isItem))
+        else if(collision.TryGetComponent<Item>(out Item item))
         {
-            typeOfItem = 2; //Item
+            AddDrip(item.ItemType);
+            Destroy(item.gameObject);
         }
 
-        if (Slot1 == 0)
-        {
-            if (typeOfItem == 1) //Droplet
-            {
-                Slot1 = collision.gameObject.GetComponent<Droplet>().DripType;
-                Destroy(collision.gameObject);
-                return;
-            }
-            if (typeOfItem == 2) //Item
-            {
-                Slot1 = collision.gameObject.GetComponent<Item>().ItemType;
-                Destroy(collision.gameObject);
-                return;
-            }
-        }
-
-        if (Slot2 == 0)
-        {
-            if (typeOfItem == 1) //Droplet
-            {
-                Slot2 = collision.gameObject.GetComponent<Droplet>().DripType;
-                Destroy(collision.gameObject);
-                return;
-            }
-            if (typeOfItem == 2) //Item
-            {
-                Slot2 = collision.gameObject.GetComponent<Item>().ItemType;
-                Destroy(collision.gameObject);
-                return;
-            }
-        }
-
-        if (Slot3 == 0)
-        {
-            if (typeOfItem == 1) //Droplet
-            {
-                Slot3 = collision.gameObject.GetComponent<Droplet>().DripType;
-                Destroy(collision.gameObject);
-                return;
-            }
-            if (typeOfItem == 2) //Item
-            {
-                Slot3 = collision.gameObject.GetComponent<Item>().ItemType;
-                Destroy(collision.gameObject);
-                return;
-            }
-        }
-
+        if (currentslot == 4)
+            MakePotion();
     }
+
+    void SetSlot(int slot, PotionType drip)
+    {
+        if (slot == 1)
+            Slot1 = drip;
+        else if(slot == 2)
+            Slot2 = drip;
+        else if(slot == 3)
+            Slot3 = drip;
+    }
+
+    void ResetSlots()
+    {
+        Slot1 = 0;
+        Slot2 = 0;
+        Slot3 = 0;
+        currentslot = 1;
+    }
+    void AddDrip(PotionType drip)
+    {
+        if (currentslot == 4)
+            return;
+        SetSlot(currentslot,drip);
+        currentslot++;
+    }
+
+    public void MakePotion()
+    {
+        PotionType potion = GetRecipe(Slot1, Slot2, Slot3);
+        if (potion != PotionType.Empty)
+            Instantiate(PotionPrefabs[(int)potion], PotionSpawnPoint.position, Quaternion.identity);
+
+        ResetSlots();
+    }
+
+    Dictionary<RecipeKey, PotionType> recipes = new Dictionary<RecipeKey, PotionType>
+    {
+        //Ruby + Emerald + Sapphire = Celestial
+        { new RecipeKey(PotionType.Ruby, PotionType.Emerald, PotionType.Sapphire), PotionType.Celestial }, 
+        // Celestial + Ruby = Sun
+        { new RecipeKey(PotionType.Celestial, PotionType.Ruby, PotionType.Empty), PotionType.Sun },
+        // Celestial + Sapphire = Moon
+        { new RecipeKey(PotionType.Celestial, PotionType.Sapphire, PotionType.Empty), PotionType.Moon },
+        // Ruby + Sapphire = Nectar
+        { new RecipeKey(PotionType.Ruby, PotionType.Sapphire, PotionType.Empty), PotionType.Nectar },
+        // Blood + Nectar = Ichor
+        { new RecipeKey(PotionType.Blood, PotionType.Nectar, PotionType.Empty), PotionType.Ichor },
+        // Emerald + Sapphire = Blessing
+        { new RecipeKey(PotionType.Emerald, PotionType.Sapphire, PotionType.Empty), PotionType.Blessing },
+        // Ruby + Emerald = Plague
+        { new RecipeKey(PotionType.Ruby, PotionType.Emerald, PotionType.Empty), PotionType.Plague },
+        // Blessing + Ichor = HolyIchor
+        { new RecipeKey(PotionType.Blessing, PotionType.Ichor, PotionType.Empty), PotionType.HolyIchor }, 
+        // Plague + Ichor = DarkIchor
+        { new RecipeKey(PotionType.Plague, PotionType.Ichor, PotionType.Empty), PotionType.DarkIchor }, 
+        // Sun + HolyIchor + Soul = Life
+        { new RecipeKey(PotionType.Sun, PotionType.HolyIchor, PotionType.Soul), PotionType.Life }, 
+        // Moon + DarkIchor + Soul = Death
+        { new RecipeKey(PotionType.Moon, PotionType.DarkIchor, PotionType.Soul), PotionType.Death }, 
+        // Life + Death = Mortality
+        { new RecipeKey(PotionType.Life, PotionType.Death, PotionType.Empty), PotionType.Mortality }
+    // Add more recipes here
+    };
+
+
+    PotionType GetRecipe(PotionType first , PotionType second, PotionType third)
+    {
+        var key = new RecipeKey(first, second, third);
+        if (recipes.TryGetValue(key, out var result))
+        {
+            return result;
+        }
+        return PotionType.Empty;
+
+        //// Life + Death = Master
+        //if (first == PotionType.Life || first == PotionType.Death
+        //    && second == PotionType.Life || second == PotionType.Death && second != first
+        //    && third == PotionType.Empty && third != first && third != second)
+        //{
+        //    return PotionType.Mortality;
+        //}
+
+        //return PotionType.Empty;
+    }
+
 }
