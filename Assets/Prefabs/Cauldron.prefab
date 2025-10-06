@@ -171,8 +171,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -1292336329
-  m_SortingLayer: 2
+  m_SortingLayerID: -1252234809
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 77bd70897c87aa2499563d7b73e89e75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -272,8 +272,8 @@ VFXRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1252234809
+  m_SortingLayer: 1
   m_SortingOrder: 0
 --- !u!1 &7299204336922108742
 GameObject:
@@ -443,3 +443,6 @@ MonoBehaviour:
   Slot1Position: {fileID: 415758946618730144}
   Slot2Position: {fileID: 2772852065036888208}
   Slot3Position: {fileID: 732065440273983499}
+  IdleAnim: {fileID: 0}
+  PourAnim: {fileID: 0}
+  StirAnim: {fileID: 0}

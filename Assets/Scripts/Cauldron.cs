@@ -45,19 +45,22 @@ public class Cauldron : MonoBehaviour
         {
             Slot1 = drip;
             Slot1ObjectTracker = Instantiate(PotionPrefabs[(int)drip], Slot1Position.position, Quaternion.identity);
+            Slot1ObjectTracker.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "Mouse";
             if (Slot1ObjectTracker.TryGetComponent<CircleCollider2D>(out CircleCollider2D CircleCollider2D))
             {
-                Slot1ObjectTracker.GetComponent<CircleCollider2D>().enabled = false;
+                CircleCollider2D.enabled = false;
             }
             if (Slot1ObjectTracker.TryGetComponent<CapsuleCollider2D>(out CapsuleCollider2D CapsuleCollider2D))
             {
-                Slot1ObjectTracker.GetComponent<CapsuleCollider2D>().enabled = false;
+                CapsuleCollider2D.enabled = false;
             }
+            
         }
         else if(slot == 2)
         {
             Slot2 = drip;
             Slot2ObjectTracker = Instantiate(PotionPrefabs[(int)drip], Slot2Position.position, Quaternion.identity);
+            Slot1ObjectTracker.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "Mouse";
             if (Slot2ObjectTracker.TryGetComponent<CircleCollider2D>(out CircleCollider2D CircleCollider2D))
             {
                 Slot2ObjectTracker.GetComponent<CircleCollider2D>().enabled = false;
@@ -71,6 +74,7 @@ public class Cauldron : MonoBehaviour
         {
             Slot3 = drip;
             Slot3ObjectTracker = Instantiate(PotionPrefabs[(int)drip], Slot3Position.position, Quaternion.identity);
+            Slot1ObjectTracker.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "Mouse";
             if (Slot3ObjectTracker.TryGetComponent<CircleCollider2D>(out CircleCollider2D CircleCollider2D))
             {
                 Slot3ObjectTracker.GetComponent<CircleCollider2D>().enabled = false;
