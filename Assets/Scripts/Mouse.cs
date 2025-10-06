@@ -8,8 +8,8 @@ public class Mouse : MonoBehaviour
     InputAction MouseAction;
     InputAction UseAction;
     InputAction SelectAction;
-
     Selectable SelectableObject;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,9 +22,8 @@ public class Mouse : MonoBehaviour
 
             MouseAction.performed += MoveMouse;
             UseAction.started += UseItem;
-            SelectAction.started += SelectItem;
+            SelectAction.canceled += ReleaseObject;         
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,18 +36,36 @@ public class Mouse : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
        if(SelectableObject.GameObject() == collision.gameObject)
-        {
+       {
             SelectableObject = null;
-        }
+       }
     }
-
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(SelectAction.triggered)
+        {
+            if (!SelectableObject)
+                return;
+            SelectableObject.GrabItem(transform.position);
+            SelectableObject.MakeAPotion();
+        }
+
+        if(SelectAction.inProgress)
+        {
+            if (!SelectableObject)
+                return;
+            SelectableObject.MoveSelected(transform.position);
+        }
     }
 
+    void ReleaseObject(InputAction.CallbackContext context)
+    {
+        if (!SelectableObject)
+            return;
+        SelectableObject.Release();
+    }
 
     void MoveMouse(InputAction.CallbackContext context)
     {
@@ -56,27 +73,18 @@ public class Mouse : MonoBehaviour
         transform.position = position;
     }
 
-    void SelectItem(InputAction.CallbackContext context)
+    void UseItem(InputAction.CallbackContext context)
     {
         if (!SelectableObject)
             return;
 
-        if (!SelectableObject.transform.IsChildOf(transform))
+        if(SelectableObject.TryGetComponent<Potion>(out Potion potion))
         {
-            SelectableObject.transform.position = transform.position;
-            SelectableObject.Attach(transform);
+            potion.PourPotion();
         }
-        else
-            SelectableObject.Release();
+        else if(SelectableObject.TryGetComponent<Item>(out Item item))
+        {
 
+        }
     }
-
-    void UseItem(InputAction.CallbackContext context)
-    {
-
-
-
-    }
-
-
 }
