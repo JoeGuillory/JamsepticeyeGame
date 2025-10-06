@@ -57,9 +57,9 @@ Transform:
   m_GameObject: {fileID: 2235730546144646893}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0.11, y: -0.45, z: 0}
+  m_LocalScale: {x: 0.034088254, y: 0.034088254, z: 0.034088254}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 675682963061813618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -110,7 +110,7 @@ SpriteRenderer:
   m_SortingLayerID: -1292336329
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5995131313967039915, guid: 085ba4772b6a3614ea13a6d42b6934cd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 77bd70897c87aa2499563d7b73e89e75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -219,7 +219,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.68}
-  m_Radius: 1.14
+  m_Radius: 1.52
 --- !u!114 &8556431483828258896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,5 +250,5 @@ MonoBehaviour:
   - {fileID: 5103529565062728884, guid: 982f843eb44439449b8713db87eedc4b, type: 3}
   - {fileID: 5103529565062728884, guid: 9ea92f00d4c07e8478a2f128685c037e, type: 3}
   - {fileID: 7376572278772165071, guid: e9e275e086e8b1b43ad9ec92b41ff3d7, type: 3}
-  - {fileID: 7376572278772165071, guid: e9e275e086e8b1b43ad9ec92b41ff3d7, type: 3}
+  - {fileID: 5103529565062728884, guid: 0a77cb5b9f0728642af63bfb536e38ee, type: 3}
   PotionSpawnPoint: {fileID: 295556754718150127}
