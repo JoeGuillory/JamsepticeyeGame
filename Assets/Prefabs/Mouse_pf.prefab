@@ -201,6 +201,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e442d2fa0dd80c54cae0488f944b4549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mouse
+  SelectedDeathPotion:
+    m_PersistentCalls:
+      m_Calls: []
+  UnselectedDeathPotion:
+    m_PersistentCalls:
+      m_Calls: []
+  DrinkDeathPotion:
+    m_PersistentCalls:
+      m_Calls: []
+  BloodPotion: {fileID: 5103529565062728884, guid: 286bfa85e6733f640869f6d1cd54e90c, type: 3}
+  BloodSpawn: {fileID: 0}
+  Win:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1433191140130285168
 MonoBehaviour:
   m_ObjectHideFlags: 0

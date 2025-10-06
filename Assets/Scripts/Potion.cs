@@ -12,6 +12,8 @@ public class Potion : MonoBehaviour
     bool ResetRotationInvoked = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+
+    public PotionType Potionstatus { get { return PotionStatus; }}
     Vector2 GetDropletOffset()
     {
         return DropletOffset.position;

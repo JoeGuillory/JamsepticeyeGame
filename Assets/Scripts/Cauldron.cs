@@ -132,7 +132,8 @@ public class Cauldron : MonoBehaviour
         // Moon + DarkIchor + Soul = Death
         { new RecipeKey(PotionType.Moon, PotionType.DarkIchor, PotionType.Soul), PotionType.Death }, 
         // Life + Death = Mortality
-        { new RecipeKey(PotionType.Life, PotionType.Death, PotionType.Empty), PotionType.Mortality }
+        { new RecipeKey(PotionType.Life, PotionType.Death, PotionType.Empty), PotionType.Mortality },
+        {new RecipeKey(PotionType.Ruby, PotionType.Ruby,PotionType.Ruby), PotionType.Blood }
     // Add more recipes here
     };
 
