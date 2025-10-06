@@ -102,16 +102,5 @@ public class Cauldron : MonoBehaviour
             return result;
         }
         return PotionType.Empty;
-
-        //// Life + Death = Master
-        //if (first == PotionType.Life || first == PotionType.Death
-        //    && second == PotionType.Life || second == PotionType.Death && second != first
-        //    && third == PotionType.Empty && third != first && third != second)
-        //{
-        //    return PotionType.Mortality;
-        //}
-
-        //return PotionType.Empty;
     }
-
 }
