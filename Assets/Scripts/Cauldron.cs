@@ -8,9 +8,15 @@ public class Cauldron : MonoBehaviour
 {
     [SerializeField] GameObject[] PotionPrefabs;
     [SerializeField] Transform PotionSpawnPoint;
+    [SerializeField] Transform Slot1Position;
+    [SerializeField] Transform Slot2Position;
+    [SerializeField] Transform Slot3Position;
     PotionType Slot1 = 0;
+    GameObject Slot1ObjectTracker;
     PotionType Slot2 = 0;
+    GameObject Slot2ObjectTracker;
     PotionType Slot3 = 0;
+    GameObject Slot3ObjectTracker;
     int currentslot = 1;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,11 +39,44 @@ public class Cauldron : MonoBehaviour
     void SetSlot(int slot, PotionType drip)
     {
         if (slot == 1)
+        {
             Slot1 = drip;
+            Slot1ObjectTracker = Instantiate(PotionPrefabs[(int)drip], Slot1Position.position, Quaternion.identity);
+            if (Slot1ObjectTracker.TryGetComponent<CircleCollider2D>(out CircleCollider2D CircleCollider2D))
+            {
+                Slot1ObjectTracker.GetComponent<CircleCollider2D>().enabled = false;
+            }
+            if (Slot1ObjectTracker.TryGetComponent<CapsuleCollider2D>(out CapsuleCollider2D CapsuleCollider2D))
+            {
+                Slot1ObjectTracker.GetComponent<CapsuleCollider2D>().enabled = false;
+            }
+        }
         else if(slot == 2)
+        {
             Slot2 = drip;
+            Slot2ObjectTracker = Instantiate(PotionPrefabs[(int)drip], Slot2Position.position, Quaternion.identity);
+            if (Slot2ObjectTracker.TryGetComponent<CircleCollider2D>(out CircleCollider2D CircleCollider2D))
+            {
+                Slot2ObjectTracker.GetComponent<CircleCollider2D>().enabled = false;
+            }
+            if (Slot2ObjectTracker.TryGetComponent<CapsuleCollider2D>(out CapsuleCollider2D CapsuleCollider2D))
+            {
+                Slot2ObjectTracker.GetComponent<CapsuleCollider2D>().enabled = false;
+            }
+        }
         else if(slot == 3)
+        {
             Slot3 = drip;
+            Slot3ObjectTracker = Instantiate(PotionPrefabs[(int)drip], Slot3Position.position, Quaternion.identity);
+            if (Slot3ObjectTracker.TryGetComponent<CircleCollider2D>(out CircleCollider2D CircleCollider2D))
+            {
+                Slot3ObjectTracker.GetComponent<CircleCollider2D>().enabled = false;
+            }
+            if (Slot3ObjectTracker.TryGetComponent<CapsuleCollider2D>(out CapsuleCollider2D CapsuleCollider2D))
+            {
+                Slot3ObjectTracker.GetComponent<CapsuleCollider2D>().enabled = false;
+            }
+        }
     }
 
     void ResetSlots()
@@ -46,6 +85,10 @@ public class Cauldron : MonoBehaviour
         Slot2 = 0;
         Slot3 = 0;
         currentslot = 1;
+
+        Destroy(Slot1ObjectTracker);
+        Destroy(Slot2ObjectTracker);
+        Destroy(Slot3ObjectTracker);
     }
     void AddDrip(PotionType drip)
     {
@@ -93,7 +136,6 @@ public class Cauldron : MonoBehaviour
         {new RecipeKey(PotionType.Ruby, PotionType.Ruby,PotionType.Ruby), PotionType.Blood }
     // Add more recipes here
     };
-
 
     PotionType GetRecipe(PotionType first , PotionType second, PotionType third)
     {
