@@ -10,6 +10,7 @@ public class Mouse : MonoBehaviour
     InputAction UseAction;
     InputAction SelectAction;
     InputAction DrinkAction;
+    InputAction EscapeAction;
     Selectable SelectableObject;
     [SerializeField] UnityEvent SelectedDeathPotion;
     [SerializeField] UnityEvent UnselectedDeathPotion;
@@ -37,6 +38,7 @@ public class Mouse : MonoBehaviour
             UseAction = Controls.FindAction("Use");
             SelectAction = Controls.FindAction("Select");
             DrinkAction = Controls.FindAction("Interact");
+            EscapeAction = Controls.FindAction("Escape");
 
 
             MouseAction.performed += MoveMouse;
@@ -44,6 +46,8 @@ public class Mouse : MonoBehaviour
 
             SelectAction.canceled += ReleaseObject;
             DrinkAction.started += DrinkItem;
+
+            EscapeAction.performed += EscapeProgram;
         }
     }
 
@@ -186,5 +190,10 @@ public class Mouse : MonoBehaviour
 
         }
 
+    }
+
+    void EscapeProgram(InputAction.CallbackContext context)
+    {
+        Application.Quit();
     }
 }
