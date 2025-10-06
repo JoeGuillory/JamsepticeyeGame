@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using static UnityEditor.Progress;
 
 public class Mouse : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Mouse : MonoBehaviour
     [SerializeField] UnityEvent SelectedDeathPotion;
     [SerializeField] UnityEvent UnselectedDeathPotion;
     [SerializeField] UnityEvent DrinkDeathPotion;
+
+    [SerializeField] UnityEvent Win;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,9 +46,9 @@ public class Mouse : MonoBehaviour
             return;
         collision.gameObject.TryGetComponent<Selectable>(out SelectableObject);
 
-        if(SelectableObject.TryGetComponent<Potion>(out Potion potion))
+        if(SelectableObject.TryGetComponent<Potion>(out Potion item))
         {
-            if (potion.Potionstatus == PotionType.Death)
+            if (item.Potionstatus == PotionType.Death || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Plague || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Mortality)
             {
                 SelectedDeathPotion.Invoke();
             }
@@ -54,9 +57,10 @@ public class Mouse : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (SelectableObject.TryGetComponent<Potion>(out Potion potion))
+        
+        if (SelectableObject.TryGetComponent<Potion>(out Potion item))
         {
-            if (potion.Potionstatus == PotionType.Death)
+            if (item.Potionstatus == PotionType.Death || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Plague || item.Potionstatus == PotionType.Sapphire || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Mortality)
             {
                 UnselectedDeathPotion.Invoke();
             }
@@ -128,10 +132,14 @@ public class Mouse : MonoBehaviour
 
         if(SelectableObject.TryGetComponent<Potion>(out Potion item))
         {
-            if(item.Potionstatus == PotionType.Death)
+            if(item.Potionstatus == PotionType.Death || item.Potionstatus == PotionType.DarkIchor || item.Potionstatus == PotionType.Plague || item.Potionstatus == PotionType.DarkIchor)
             {
                 Destroy(item.gameObject);
                 DrinkDeathPotion.Invoke();
+            }
+            else if(item.Potionstatus == PotionType.Mortality)
+            {
+                Win.Invoke();
             }
 
         }
